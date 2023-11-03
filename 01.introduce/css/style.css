@@ -1,77 +1,76 @@
-/* body {
-    background: #ddd;
-    color: #fff;
-} */
-
 body {
-    box-sizing: border-box;
+  height: 100vh;
+  box-sizing: border-box;
 }
 
 a {
-    color: initial;
-    text-decoration: none;
+  color: initial;
+  text-decoration: none;
 }
 
 .wrapper {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 30px;
 }
 
 .wrapper p {
-    margin-bottom: 200px;
+  line-height: 2;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 80px;
 }
 
 .IdCard {
-    min-width: 1000px;
-    /* width: 50%; */
-    /* padding: 50px 0 0; */
-    border-radius: 7px;
-    box-shadow: 0 0 10px 2px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 1100px;
+  border-radius: 7px;
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.1);
 }
 
 .IdCard h1 {
-    color: #fae6e6;
-    font-size: 2rem;
-    font-weight: 700;
-    text-shadow: 0 3px 2px rgba(0,0,0,0.1);
-    padding: 30px 0;
-    border-top-left-radius: 7px;
-    border-top-right-radius: 7px;
-    background: rgb(175, 153, 182);
-    
+  color: #fae6e6;
+  font-size: 2rem;
+  font-weight: 700;
+  text-shadow: 0 3px 2px rgba(0, 0, 0, 0.1);
+  padding: 40px 0;
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
+  background: rgb(175, 153, 182);
 }
 
 .IdCard .content {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    padding: 30px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 30px 60px 40px 10px;
 }
 
 .IdCard .content .RContent {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    margin-left: 30px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-left: 30px;
 }
 
 .IdCard .content .RContent .info {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: flex-start;
-    font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  font-size: 20px;
+  margin: 100px 0;
 }
 
-.IdCard .content .RContent .info li+li {
-    margin-top: 30px;
+.IdCard .content .RContent .info li + li {
+  margin-top: 30px;
 }
 
 .IdCard .content .RContent .skills {
-    display: flex;
+  display: flex;
+  justify-content: space-between;
 }
