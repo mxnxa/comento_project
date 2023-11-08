@@ -1,0 +1,9 @@
+@import url(../css/header.css);
+@import url(../css/main.css);
+* {
+  box-sizing: border-box;
+}
+
+.wrapper {
+  margin: 100px 0;
+}/*# sourceMappingURL=index.css.map */

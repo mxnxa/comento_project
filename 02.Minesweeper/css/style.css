@@ -1,0 +1,10 @@
+@import url(../css/header.css);
+@import url(../css/main.css);
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}/*# sourceMappingURL=style.css.map */

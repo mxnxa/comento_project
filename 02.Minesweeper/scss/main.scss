@@ -1,0 +1,16 @@
+main {
+  .gameBoard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    .button {
+      width: 30px;
+      height: 30px;
+      background: green;
+      border: 1px solid black;
+      cursor: pointer;
+    }
+  }
+}
