@@ -1,7 +1,24 @@
+@import url(../css/color.css);
 @import url(../css/header.css);
 @import url(../css/main.css);
+@font-face {
+  font-family: "SOYOMapleBoldTTF";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2310@1.0/SOYOMapleBoldTTF.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "omyu_pretty";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-01@1.0/omyu_pretty.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
 * {
   box-sizing: border-box;
+}
+
+body {
+  font-family: "SOYOMapleBoldTTF";
 }
 
 .wrapper {

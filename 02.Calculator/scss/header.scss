@@ -1,8 +1,11 @@
 header {
   margin: 40px;
+
   h1 {
-    font-size: 28px;
-    font-weight: 700;
+    font: {
+      size: 28px;
+      //   weight: 700;
+    }
     text-align: center;
   }
 }
