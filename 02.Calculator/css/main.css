@@ -3,16 +3,16 @@ main {
 }
 main .calculator {
   max-width: 450px;
-  border: 1px solid rgba(0, 0, 0, 0.1);
   margin: 0 auto;
   padding: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 8px;
 }
 main .calculator .display {
   text-align: end;
-  border: 1px solid rgba(0, 0, 0, 0.1);
   margin-bottom: 15px;
   padding: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 8px;
 }
 main .calculator .display span {
