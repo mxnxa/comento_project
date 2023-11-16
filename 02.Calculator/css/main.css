@@ -14,8 +14,6 @@ main .calculator .display {
   padding: 20px;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 8px;
-}
-main .calculator .display span {
   font-size: 26px;
 }
 main .calculator .keypad .btnContainer {
