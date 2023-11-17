@@ -3,59 +3,67 @@ const operators = document.querySelectorAll(".operator");
 const numBtns = document.querySelectorAll(".numBtn");
 const display = document.querySelector(".display");
 
-const operator = "";
-const num1 = 0;
-const num2 = "";
-const result = 0;
+let operatorOn = "";
+let firstNum = "";
+let secondNum = "";
+let result = "";
+
+function calculate(num1, operator, num2) {
+  switch (operator) {
+    case "+":
+      result = parseInt(num1) + parseInt(num2);
+      break;
+    case "-":
+      result = parseInt(num1) - parseInt(num2);
+      break;
+    case "x":
+      result = parseInt(num1) * parseInt(num2);
+      break;
+    case "/":
+      result = parseInt(num1) / parseInt(num2);
+      break;
+    default:
+      result = "";
+  }
+  return result;
+}
 
 buttons.forEach((btn) => {
-  btn.addEventListener("click", function () {
-    console.log("click");
-    console.log(btn.textContent);
+  btn.addEventListener("click", function (e) {
+    let action = e.target.classList[1];
+    let btnContent = e.target.textContent;
 
-    display.innerHTML = btn.textContent;
+    if (action === "numBtn") {
+      if (display.textContent === "" && btnContent === "") {
+        display.textContent = btnContent;
+        firstNum = display.textContent;
+      } else if (display.textContent === "" && btnContent !== "") {
+        display.textContent = btnContent;
+        resentNum = display.textContent;
+      } else if (display.textContent !== "" && btnContent === "") {
+        display.textContent += btnContent;
+        firstNum = display.textContent;
+      } else if (display.textContent !== "" && btnContent !== "") {
+        display.textContent += btnContent;
+        resentNum = display.textContent;
+      }
+    }
+
+    if (action === "operator") {
+      operatorOn = btnContent;
+      firstNum = display.textContent;
+      display.textContent = "";
+    }
+
+    if (action === "result") {
+      display.textContent = calculate(firstNum, operatorOn, resentNum);
+    }
+
+    if (action === "clear") {
+      display.textContent = "";
+      firstNum = "";
+      resentNum = "";
+      operatorOn = "";
+    }
   });
 });
-
-// operators.forEach((btn) => {
-//   btn.addEventListener("click", function () {
-//     operator = btn.textContent;
-//     console.log("operator:", operator);
-//   });
-// });
-
-// numBtns.forEach((btn) => {
-//   btn.addEventListener("click", function () {
-//     console.log("click");
-//     console.log(btn.textContent);
-
-//     num1 = btn.textContent;
-//   });
-// });
-
-// switch (operator) {
-//   case "+":
-//     result = num1 + num2;
-// }
-
-// console.log("result = ", result);
-
-// for (i = 0; i < 100; i++) {
-//   console.log(buttons[i].textContent);
-// }
-
-// const num1 = parseInt(prompt("숫자 입력"));
-// const num2 = parseInt(prompt("숫자 입력"));
-// const sum = num1 + num2;
-
-// console.log(num1, num2);
-// console.log(sum);
-
-// document.querySelector(".display span").innerHTML = sum;
-
-// const testBtn = document.querySelector(".test");
-
-// testBtn.addEventListener("click", function () {
-//   console.log("click");
-//     console.log(testBtn.textContent);
-// });

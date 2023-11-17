@@ -11,10 +11,11 @@ main .calculator {
 main .calculator .display {
   text-align: end;
   margin-bottom: 15px;
-  padding: 20px;
+  padding: 0 20px;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 8px;
-  font-size: 26px;
+  height: 64px;
+  line-height: 64px;
 }
 main .calculator .keypad .btnContainer {
   display: flex;
