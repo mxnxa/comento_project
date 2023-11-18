@@ -56,7 +56,7 @@ input {
 }
 
 header {
-  padding-bottom: 40px;
+  padding-bottom: 20px;
 }
 header h1 {
   font-size: 3rem;
@@ -78,12 +78,13 @@ main .todo_list .todo_item {
   display: flex;
   align-items: center;
 }
-main .todo_list .todo_item + li {
-  margin-top: 30px;
+main .todo_list .todo_item:hover .remove {
+  display: flex;
 }
 main .todo_list .todo_item .todo_text {
-  width: 100%;
-  position: relative;
+  height: 60px;
+  line-height: 60px;
+  flex: 1;
 }
 main .todo_list .todo_item .todo_text::after {
   content: "";
@@ -91,8 +92,9 @@ main .todo_list .todo_item .todo_text::after {
   width: 100%;
   height: 1px;
   background-color: rgb(198, 198, 198);
-  position: absolute;
-  bottom: -20px;
+}
+main .todo_list .todo_item .remove {
+  display: none;
 }
 main .todo_create {
   display: flex;
