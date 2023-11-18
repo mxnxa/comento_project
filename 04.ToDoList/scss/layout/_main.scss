@@ -7,6 +7,8 @@ main {
   justify-content: space-between;
 
   .todo_list {
+    height: 50px;
+    line-height: 50px;
     flex: 1;
     margin-bottom: 40px;
 
@@ -15,14 +17,13 @@ main {
       align-items: center;
 
       &:hover {
-        .remove {
-          display: flex;
+        .btn_update,
+        .btn_delete {
+          display: block;
         }
       }
 
       .todo_text {
-        height: 60px;
-        line-height: 60px;
         flex: 1;
 
         &::after {
@@ -32,10 +33,6 @@ main {
           height: 1px;
           background-color: rgba(198, 198, 198, 1);
         }
-      }
-
-      .remove {
-        display: none;
       }
     }
   }

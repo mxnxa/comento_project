@@ -45,6 +45,24 @@ html body {
   line-height: 25px;
   text-align: center;
 }
+.btn_update {
+  width: 70px;
+  height: inherit;
+  color: #fff;
+  text-align: center;
+  display: none;
+  background: rgb(255, 149, 1);
+  cursor: pointer;
+}
+.btn_delete {
+  width: 70px;
+  height: inherit;
+  color: #fff;
+  text-align: center;
+  display: none;
+  background: rgb(234, 79, 61);
+  cursor: pointer;
+}
 
 input {
   width: 100%;
@@ -71,6 +89,8 @@ main {
   justify-content: space-between;
 }
 main .todo_list {
+  height: 50px;
+  line-height: 50px;
   flex: 1;
   margin-bottom: 40px;
 }
@@ -78,12 +98,11 @@ main .todo_list .todo_item {
   display: flex;
   align-items: center;
 }
-main .todo_list .todo_item:hover .remove {
-  display: flex;
+main .todo_list .todo_item:hover .btn_update,
+main .todo_list .todo_item:hover .btn_delete {
+  display: block;
 }
 main .todo_list .todo_item .todo_text {
-  height: 60px;
-  line-height: 60px;
   flex: 1;
 }
 main .todo_list .todo_item .todo_text::after {
@@ -92,9 +111,6 @@ main .todo_list .todo_item .todo_text::after {
   width: 100%;
   height: 1px;
   background-color: rgb(198, 198, 198);
-}
-main .todo_list .todo_item .remove {
-  display: none;
 }
 main .todo_create {
   display: flex;
