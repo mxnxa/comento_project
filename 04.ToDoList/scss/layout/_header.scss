@@ -1,0 +1,14 @@
+@import "../base/color";
+
+header {
+  padding-bottom: 40px;
+
+  h1 {
+    font: {
+      size: 3rem;
+      weight: 700;
+    }
+    // text-align: center;
+    color: $primary-color;
+  }
+}
