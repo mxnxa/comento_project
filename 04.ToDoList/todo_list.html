@@ -20,23 +20,30 @@
       <!-- 일정 리스트 출력 -->
       <ul class="todo_list">
         <li class="todo_item">
-          <div class="check_circle"></div>
+          <div class="button btn_check"></div>
           <p class="todo_text">리스트1</p>
         </li>
         <li class="todo_item">
-          <div class="check_circle"></div>
+          <div class="button btn_check"></div>
           <p class="todo_text">리스트2</p>
         </li>
         <li class="todo_item">
-          <div class="check_circle"></div>
+          <div class="button btn_complete"><div></div></div>
           <p class="todo_text">리스트3</p>
+        </li>
+        <li class="todo_item todo_blank">
+          <div class="button btn_check"><div></div></div>
+          <form action="#" class="todo_text"><input type="text" /></form>
         </li>
       </ul>
 
       <!-- 일정 추가 -->
       <div class="todo_create">
-        <div class="btn_create">+</div>
-        <input type="text" />
+        <!-- <form action="#"> -->
+        <div class="button btn_create">+</div>
+        <p class="create_text">새로운 일정</p>
+        <!-- <input type="text" /> -->
+        <!-- </form> -->
       </div>
     </main>
     <!-- </div> -->
