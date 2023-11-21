@@ -8,12 +8,9 @@
     <script src="./js/script.js" defer></script>
   </head>
   <body>
-    <!-- <div class="todo_template"> -->
-
     <header>
       <h1>TO DO LIST</h1>
     </header>
-
     <main>
       <!-- 일정 리스트 출력 -->
       <ul class="todo_list">
@@ -37,7 +34,9 @@
         </li>
         <li class="todo_item todo_blank">
           <div class="button btn_check"><div></div></div>
-          <form action="#" class="todo_text"><input type="text" /></form>
+          <form action="#" class="todo_text todo_input">
+            <input type="text" class="input-text" autofocus />
+          </form>
           <div class="btn_update">수정</div>
           <div class="btn_delete">삭제</div>
         </li>
@@ -45,13 +44,9 @@
 
       <!-- 일정 추가 -->
       <div class="todo_create">
-        <!-- <form action="#"> -->
         <div class="button btn_create">+</div>
         <p class="create_text">새로운 일정</p>
-        <!-- <input type="text" /> -->
-        <!-- </form> -->
       </div>
     </main>
-    <!-- </div> -->
   </body>
 </html>
