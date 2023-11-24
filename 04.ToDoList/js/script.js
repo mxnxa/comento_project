@@ -5,7 +5,7 @@ const todoInput = document.querySelector(".todo_input");
 let todos = [];
 let id = 0;
 
-// create
+// input 입력에 대한 이벤트 처리
 todoInput.addEventListener("keydown", (e) => {
   if (e.key === "Enter") {
     if (!todoInput.value) {
@@ -36,18 +36,22 @@ function paintTodos() {
     const todoItemElem = document.createElement("li");
     todoItemElem.classList.add("todo_item");
 
+    // 체크 버튼
     const checkBtnElem = document.createElement("div");
     checkBtnElem.classList.add("button");
     checkBtnElem.classList.add("btn_check");
 
+    // 일정 내용
     const todoTextElem = document.createElement("p");
     todoTextElem.classList.add("todo_text");
     todoTextElem.innerHTML = todo.content;
 
+    // 수정 버튼
     const updateBtnElem = document.createElement("div");
     updateBtnElem.classList.add("btn_update");
     updateBtnElem.innerText = "수정";
 
+    // 삭제 버튼
     const delBtnElem = document.createElement("div");
     delBtnElem.classList.add("btn_delete");
     delBtnElem.innerText = "삭제";
@@ -61,25 +65,20 @@ function paintTodos() {
 
     todoInput.value = "";
 
+    // 일정 삭제
     delBtnElem.addEventListener("click", (e) => {
       const target = e.target.parentNode;
       todoList.removeChild(target);
+      console.log(e.target.parentNode);
     });
+
+    // 일정 완료
+    // checkBtnElem.addEventListener("click", (e) => {
+    //   todos.map((todo) =>
+    //     todo.id !== e.target.id ? { ...todo, complete: !todo.complete } : todo
+    //   );
+    //   console.log(e.target.value);
+    //   console.log(todos);
+    // });
   });
 }
-
-// delBtnElem.addEventListener("click", (e) => {
-//     todos.filter((todo) => todo.id !== e.target.id);
-//     //   paintTodos();
-//     console.log(e.target.id);
-//     console.log(todos);
-//   });
-
-// 일정 수정
-// function updateTodo() {
-//     updateBtnElem.addEventListener("click", e =>
-
-//     )
-// }
-
-// 일정 삭제
