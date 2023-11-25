@@ -15,19 +15,19 @@
   }
 
   // 일정 완료 시 버튼 스타일
-  &_complete {
-    border: 2px solid $primary-color;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  // &_complete {
+  //   border: 2px solid $primary-color;
+  //   display: flex;
+  //   justify-content: center;
+  //   align-items: center;
 
-    .inner_circle {
-      width: 15px;
-      height: 15px;
-      border-radius: 50%;
-      background: $primary-color;
-    }
-  }
+  //   .inner_circle {
+  //     width: 15px;
+  //     height: 15px;
+  //     border-radius: 50%;
+  //     background: $primary-color;
+  //   }
+  // }
 
   // 일정 추가 버튼 스타일
   // &_create {

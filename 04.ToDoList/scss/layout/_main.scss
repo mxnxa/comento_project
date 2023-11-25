@@ -21,6 +21,24 @@ main {
       height: 50px;
       line-height: 50px;
 
+      &.complete {
+        color: $sencondary-color;
+
+        .btn_check {
+          border: 2px solid $primary-color;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          .inner_circle {
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background: $primary-color;
+          }
+        }
+      }
+
       &:hover {
         .btn_update,
         .btn_delete {
@@ -46,7 +64,7 @@ main {
   }
 
   // 완료된 일정에 대한 스타일
-  .todo_complete {
-    color: $sencondary-color;
-  }
+  // .complete {
+  //   color: $sencondary-color;
+  // }
 }

@@ -42,18 +42,6 @@ html body {
 .btn_check {
   border: 2px solid rgb(196, 196, 198);
 }
-.btn_complete {
-  border: 2px solid rgb(181, 122, 214);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.btn_complete .inner_circle {
-  width: 15px;
-  height: 15px;
-  border-radius: 50%;
-  background: rgb(181, 122, 214);
-}
 .btn_update {
   width: 70px;
   height: inherit;
@@ -120,6 +108,21 @@ main .todo_list .todo_item {
   height: 50px;
   line-height: 50px;
 }
+main .todo_list .todo_item.complete {
+  color: rgb(196, 196, 198);
+}
+main .todo_list .todo_item.complete .btn_check {
+  border: 2px solid rgb(181, 122, 214);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .todo_list .todo_item.complete .btn_check .inner_circle {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: rgb(181, 122, 214);
+}
 main .todo_list .todo_item:hover .btn_update,
 main .todo_list .todo_item:hover .btn_delete {
   display: block;
@@ -135,7 +138,4 @@ main .todo_list .todo_item .todo_text::after {
   height: 1px;
   background-color: rgb(198, 198, 198);
   position: absolute;
-}
-main .todo_complete {
-  color: rgb(196, 196, 198);
 }/*# sourceMappingURL=main.css.map */
