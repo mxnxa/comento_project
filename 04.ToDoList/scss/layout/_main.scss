@@ -1,21 +1,20 @@
-@import "../base/color";
-
 main {
   flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  border: 1px solid $sencondary-color;
-  // padding: 20px;
-  background-color: #fff;
   height: 700px;
+  border: 1px solid $sencondary-color;
+  border-radius: 10px;
+  background-color: #fff;
 
+  // 일정 목록(ul)
   .todo_list {
     flex: 1;
-    margin-bottom: 40px;
-    padding: 10px 20px;
+    padding: 10px 20px 20px;
     overflow: auto;
 
+    // 일정(li)
     .todo_item {
       display: flex;
       align-items: center;
@@ -29,6 +28,7 @@ main {
         }
       }
 
+      // 일정 내용(p)
       .todo_text {
         flex: 1;
         position: relative;
@@ -43,37 +43,10 @@ main {
         }
       }
     }
-
-    // .todo_blank {
-    //   display: none;
-    // }
   }
 
-  .todo_create {
-    display: flex;
-    align-items: center;
-    font-weight: 700;
-    height: 50px;
-    line-height: 50px;
-    border-top: 1px solid $sencondary-color;
-    padding: 10px 20px;
-
-    .todo_text {
-      flex: 1;
-      position: relative;
-
-      // &::after {
-      //   content: "";
-      //   display: block;
-      //   width: 100%;
-      //   height: 1px;
-      //   background-color: rgba(198, 198, 198, 1);
-      //   position: absolute;
-      // }
-    }
-
-    .create_text {
-      color: $primary-color;
-    }
+  // 완료된 일정에 대한 스타일
+  .todo_complete {
+    color: $sencondary-color;
   }
 }

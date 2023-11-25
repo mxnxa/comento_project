@@ -16,10 +16,23 @@ html body {
   padding: 80px 0;
   margin: 0 auto;
   background-color: rgba(221, 217, 211, 0.438);
+  font-family: "SOYOMapleRegular";
 }
 
+@font-face {
+  font-family: "SOYOMapleBold";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2310@1.0/SOYOMapleBoldTTF.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SOYOMapleRegular";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2310@1.0/SOYOMapleRegularTTF.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
 .button {
-  width: 26.5px;
+  width: 25px;
   height: 25px;
   border-radius: 50%;
   margin-right: 15px;
@@ -35,18 +48,11 @@ html body {
   justify-content: center;
   align-items: center;
 }
-.btn_complete div {
+.btn_complete .inner_circle {
   width: 15px;
   height: 15px;
   border-radius: 50%;
   background: rgb(181, 122, 214);
-}
-.btn_create {
-  color: #fff;
-  font-size: 25px;
-  background: rgb(181, 122, 214);
-  line-height: 25px;
-  text-align: center;
 }
 .btn_update {
   width: 70px;
@@ -67,9 +73,16 @@ html body {
   cursor: pointer;
 }
 
-input {
+form {
+  height: 50px;
+  padding: 10px 20px;
+  border-top: 1px solid rgb(196, 196, 198);
+}
+form input {
   width: 100%;
+  height: 100%;
   font-size: inherit;
+  font-family: "SOYOMapleRegular";
   border: none;
   background: none;
   outline: none;
@@ -77,6 +90,7 @@ input {
 
 header {
   padding-bottom: 30px;
+  font-family: "SOYOMapleBold";
 }
 header h1 {
   font-size: 3rem;
@@ -90,14 +104,14 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  border: 1px solid rgb(196, 196, 198);
-  background-color: #fff;
   height: 700px;
+  border: 1px solid rgb(196, 196, 198);
+  border-radius: 10px;
+  background-color: #fff;
 }
 main .todo_list {
   flex: 1;
-  margin-bottom: 40px;
-  padding: 10px 20px;
+  padding: 10px 20px 20px;
   overflow: auto;
 }
 main .todo_list .todo_item {
@@ -122,19 +136,6 @@ main .todo_list .todo_item .todo_text::after {
   background-color: rgb(198, 198, 198);
   position: absolute;
 }
-main .todo_create {
-  display: flex;
-  align-items: center;
-  font-weight: 700;
-  height: 50px;
-  line-height: 50px;
-  border-top: 1px solid rgb(196, 196, 198);
-  padding: 10px 20px;
-}
-main .todo_create .todo_text {
-  flex: 1;
-  position: relative;
-}
-main .todo_create .create_text {
-  color: rgb(181, 122, 214);
+main .todo_complete {
+  color: rgb(196, 196, 198);
 }/*# sourceMappingURL=main.css.map */

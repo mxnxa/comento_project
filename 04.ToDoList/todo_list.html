@@ -16,24 +16,33 @@
       <ul class="todo_list">
         <!-- <li class="todo_item">
           <div class="button btn_check"></div>
-          <p class="todo_text">리스트1</p>
+          <p class="todo_text">새로운 일정</p>
+          <div class="btn_update">수정</div>
+          <div class="btn_delete">삭제</div>
+        </li>
+        <li class="todo_item todo_complete">
+          <div class="button btn_complete"><div></div></div>
+          <p class="todo_text">완료된 일정</p>
+          <div class="btn_update">수정</div>
+          <div class="btn_delete">삭제</div>
+        </li>
+        <li class="todo_item">
+          <div class="button btn_check"></div>
+          <p class="todo_text">새로운 일정</p>
           <div class="btn_update">수정</div>
           <div class="btn_delete">삭제</div>
         </li> -->
       </ul>
 
-      <!-- 일정 추가 -->
-      <div class="todo_create">
-        <div class="button btn_create">+</div>
-        <form action="#" class="todo_text">
-          <input
-            type="text"
-            class="todo_input"
-            placeholder="새로운 일정"
-            autofocus
-          />
-        </form>
-      </div>
+      <!-- 일정 입력 -->
+      <form action="#" class="todo_form">
+        <input
+          type="text"
+          class="todo_input"
+          placeholder="새로운 일정"
+          autofocus
+        />
+      </form>
     </main>
   </body>
 </html>
