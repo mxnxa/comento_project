@@ -14,30 +14,6 @@
     border: 2px solid $sencondary-color;
   }
 
-  // 일정 완료 시 버튼 스타일
-  // &_complete {
-  //   border: 2px solid $primary-color;
-  //   display: flex;
-  //   justify-content: center;
-  //   align-items: center;
-
-  //   .inner_circle {
-  //     width: 15px;
-  //     height: 15px;
-  //     border-radius: 50%;
-  //     background: $primary-color;
-  //   }
-  // }
-
-  // 일정 추가 버튼 스타일
-  // &_create {
-  //   color: #fff;
-  //   font-size: 25px;
-  //   background: $primary-color;
-  //   line-height: 25px;
-  //   text-align: center;
-  // }
-
   // 일정 수정 버튼 스타일
   &_update {
     width: 70px;
@@ -58,5 +34,22 @@
     display: none;
     background: $btn-delete;
     cursor: pointer;
+  }
+}
+
+// 일정 완료 시 버튼 스타일
+.complete {
+  .btn_check {
+    border: 2px solid $primary-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .inner_circle {
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      background: $primary-color;
+    }
   }
 }

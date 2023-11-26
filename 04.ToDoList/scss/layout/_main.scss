@@ -23,20 +23,6 @@ main {
 
       &.complete {
         color: $sencondary-color;
-
-        .btn_check {
-          border: 2px solid $primary-color;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-
-          .inner_circle {
-            width: 15px;
-            height: 15px;
-            border-radius: 50%;
-            background: $primary-color;
-          }
-        }
       }
 
       &:hover {

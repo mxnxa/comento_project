@@ -7,20 +7,23 @@ let todos = [];
 let id = 0;
 
 // input 입력에 대한 이벤트 처리
-todoInput.addEventListener("keydown", (e) => {
-  if (e.key === "Enter") {
-    // 일정을 입력하지 않고 enter키를 누를경우 경고창 띄움
-    if (todoInput.value === "") {
-      alert("일정을 입력하세요.");
-      todoInput.focus();
-      return;
-    }
+function submit() {
+  todoInput.addEventListener("keydown", (e) => {
+    if (e.key === "Enter") {
+      // 일정을 입력하지 않고 enter키를 누를경우 경고창 띄움
+      if (todoInput.value === "") {
+        alert("일정을 입력하세요.");
+        todoInput.focus();
+        return;
+      }
 
-    appendTodos(e.target.value);
-    todoInput.value = "";
-    console.log(todos);
-  }
-});
+      appendTodos(e.target.value);
+      todoInput.value = "";
+      console.log(todos);
+    }
+  });
+}
+submit();
 
 // 일정 추가
 function appendTodos(text) {
@@ -49,6 +52,13 @@ function paintTodos() {
     checkBtnElem.classList.add("button");
     checkBtnElem.classList.add("btn_check");
 
+    if (todo.complete) {
+      const innerCircle = document.createElement("div");
+      todoItemElem.classList.add("complete");
+      innerCircle.classList.add("inner_circle");
+      checkBtnElem.appendChild(innerCircle);
+    }
+
     // 일정 내용
     const todoTextElem = document.createElement("p");
     todoTextElem.classList.add("todo_text");
@@ -73,45 +83,32 @@ function paintTodos() {
 
     todoInput.value = "";
 
-    // 일정 삭제
-    delBtnElem.addEventListener("click", (e) => {
-      deleteTodo(e.target.parentNode);
+    // 삭제 버튼 이벤트
+    delBtnElem.addEventListener("click", () => {
+      deleteTodo(todo.id);
     });
 
-    // 일정 완료
+    // 완료 표시 버튼 이벤트
     checkBtnElem.addEventListener("click", () => {
-      //   completeTodo(todo.id);
-      //   console.log(todo.id);
-      //   console.log(todo.complete);
-      completeTodo(todo, todoItemElem, checkBtnElem);
-      //   completeTodo(todo.id);
+      completeTodo(todo.id);
+      console.log(todo.id);
+      console.log(todo.complete);
+      //   completeTodo(todo, todoItemElem, checkBtnElem);
     });
   });
 }
 
-function deleteTodo(target) {
-  //   const target = e.target.parentNode;
-  todoList.removeChild(target);
+// 일정 삭제
+function deleteTodo(todoId) {
+  todos = todos.filter((todo) => todo.id !== todoId);
+  paintTodos();
 }
 
-function completeTodo(todo, todoItemElem, checkBtnElem) {
-  const innerCircle = document.createElement("div");
+// 일정 완료
+function completeTodo(todoId) {
+  todos = todos.map((todo) =>
+    todo.id === todoId ? { ...todo, complete: !todo.complete } : todo
+  );
 
-  todo.complete = !todo.complete;
-
-  if (todo.complete) {
-    todoItemElem.classList.add("complete");
-    innerCircle.classList.add("inner_circle");
-    checkBtnElem.appendChild(innerCircle);
-  } else {
-    todoItemElem.classList.remove("complete");
-    innerCircle.classList.remove("inner_circle");
-    checkBtnElem.removeChild(innerCircle);
-  }
+  paintTodos();
 }
-
-// const completeTodo = (todoId) => {
-//   todos.map((todo) =>
-//     todo.id !== todoId ? { ...todo, complete: !todo.complete } : todo
-//   );
-// };
